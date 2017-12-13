@@ -1,7 +1,7 @@
 //
 //  Activities.swift
 //  Manhattan Challenge
-//
+//vincenzo
 //  Created by Michele De Sena on 13/12/2017.
 //  Copyright © 2017 Michele De Sena. All rights reserved.
 //
