@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		058CB7FE1FE179A300BE3F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058CB7FD1FE179A300BE3F19 /* AppDelegate.swift */; };
-		058CB8001FE179A300BE3F19 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058CB7FF1FE179A300BE3F19 /* FirstViewController.swift */; };
 		058CB8021FE179A300BE3F19 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058CB8011FE179A300BE3F19 /* SecondViewController.swift */; };
 		058CB8051FE179A300BE3F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8031FE179A300BE3F19 /* Main.storyboard */; };
 		058CB8071FE179A300BE3F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8061FE179A300BE3F19 /* Assets.xcassets */; };
 		058CB80A1FE179A300BE3F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8081FE179A300BE3F19 /* LaunchScreen.storyboard */; };
+		19E46D1C1FE17F5100D53E2F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D121FE17F5000D53E2F /* FirstViewController.swift */; };
+		19E46D1D1FE17F5100D53E2F /* SharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D131FE17F5000D53E2F /* SharingViewController.swift */; };
+		19E46D1E1FE17F5100D53E2F /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D141FE17F5000D53E2F /* Activities.swift */; };
+		19E46D1F1FE17F5100D53E2F /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D151FE17F5100D53E2F /* PeopleViewController.swift */; };
+		19E46D201FE17F5100D53E2F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D161FE17F5100D53E2F /* ProfileViewController.swift */; };
+		19E46D211FE17F5100D53E2F /* SharedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D171FE17F5100D53E2F /* SharedItem.swift */; };
+		19E46D221FE17F5100D53E2F /* SharedItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D181FE17F5100D53E2F /* SharedItemCollectionViewCell.swift */; };
+		19E46D231FE17F5100D53E2F /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D191FE17F5100D53E2F /* Items.swift */; };
+		19E46D241FE17F5100D53E2F /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D1A1FE17F5100D53E2F /* Activity.swift */; };
+		19E46D251FE17F5100D53E2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D1B1FE17F5100D53E2F /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		058CB7FA1FE179A300BE3F19 /* ManatthanChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManatthanChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		058CB7FD1FE179A300BE3F19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		058CB7FF1FE179A300BE3F19 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		058CB8011FE179A300BE3F19 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		058CB8041FE179A300BE3F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		058CB8061FE179A300BE3F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058CB8091FE179A300BE3F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058CB80B1FE179A300BE3F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19E46D121FE17F5000D53E2F /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		19E46D131FE17F5000D53E2F /* SharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingViewController.swift; sourceTree = "<group>"; };
+		19E46D141FE17F5000D53E2F /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		19E46D151FE17F5100D53E2F /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		19E46D161FE17F5100D53E2F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		19E46D171FE17F5100D53E2F /* SharedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItem.swift; sourceTree = "<group>"; };
+		19E46D181FE17F5100D53E2F /* SharedItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		19E46D191FE17F5100D53E2F /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		19E46D1A1FE17F5100D53E2F /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		19E46D1B1FE17F5100D53E2F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,40 @@
 		058CB7FC1FE179A300BE3F19 /* ManatthanChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				058CB7FD1FE179A300BE3F19 /* AppDelegate.swift */,
-				058CB7FF1FE179A300BE3F19 /* FirstViewController.swift */,
-				058CB8011FE179A300BE3F19 /* SecondViewController.swift */,
+				19E46D271FE17FD500D53E2F /* ViewControllers */,
+				19E46D261FE17FAB00D53E2F /* Swift files */,
 				058CB8031FE179A300BE3F19 /* Main.storyboard */,
+				058CB7FD1FE179A300BE3F19 /* AppDelegate.swift */,
+				19E46D181FE17F5100D53E2F /* SharedItemCollectionViewCell.swift */,
 				058CB8061FE179A300BE3F19 /* Assets.xcassets */,
 				058CB8081FE179A300BE3F19 /* LaunchScreen.storyboard */,
 				058CB80B1FE179A300BE3F19 /* Info.plist */,
 			);
 			path = ManatthanChallenge;
+			sourceTree = "<group>";
+		};
+		19E46D261FE17FAB00D53E2F /* Swift files */ = {
+			isa = PBXGroup;
+			children = (
+				19E46D141FE17F5000D53E2F /* Activities.swift */,
+				19E46D1A1FE17F5100D53E2F /* Activity.swift */,
+				19E46D191FE17F5100D53E2F /* Items.swift */,
+				19E46D171FE17F5100D53E2F /* SharedItem.swift */,
+				19E46D1B1FE17F5100D53E2F /* User.swift */,
+			);
+			path = "Swift files";
+			sourceTree = "<group>";
+		};
+		19E46D271FE17FD500D53E2F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				19E46D121FE17F5000D53E2F /* FirstViewController.swift */,
+				058CB8011FE179A300BE3F19 /* SecondViewController.swift */,
+				19E46D151FE17F5100D53E2F /* PeopleViewController.swift */,
+				19E46D161FE17F5100D53E2F /* ProfileViewController.swift */,
+				19E46D131FE17F5000D53E2F /* SharingViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +182,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E46D1C1FE17F5100D53E2F /* FirstViewController.swift in Sources */,
+				19E46D221FE17F5100D53E2F /* SharedItemCollectionViewCell.swift in Sources */,
+				19E46D1F1FE17F5100D53E2F /* PeopleViewController.swift in Sources */,
+				19E46D231FE17F5100D53E2F /* Items.swift in Sources */,
 				058CB8021FE179A300BE3F19 /* SecondViewController.swift in Sources */,
+				19E46D251FE17F5100D53E2F /* User.swift in Sources */,
 				058CB7FE1FE179A300BE3F19 /* AppDelegate.swift in Sources */,
-				058CB8001FE179A300BE3F19 /* FirstViewController.swift in Sources */,
+				19E46D201FE17F5100D53E2F /* ProfileViewController.swift in Sources */,
+				19E46D1D1FE17F5100D53E2F /* SharingViewController.swift in Sources */,
+				19E46D1E1FE17F5100D53E2F /* Activities.swift in Sources */,
+				19E46D241FE17F5100D53E2F /* Activity.swift in Sources */,
+				19E46D211FE17F5100D53E2F /* SharedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GNKYKZ88N8;
+				DEVELOPMENT_TEAM = D4L4S7MAUX;
 				INFOPLIST_FILE = ManatthanChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ManatthanChallenge;
@@ -294,7 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GNKYKZ88N8;
+				DEVELOPMENT_TEAM = D4L4S7MAUX;
 				INFOPLIST_FILE = ManatthanChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.ManatthanChallenge;
