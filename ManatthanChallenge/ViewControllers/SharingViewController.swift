@@ -15,7 +15,7 @@ import UIKit
 
 class SharingViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     let items = Items.shared
-    let photo = [#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"), #imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24"),#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"), #imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24")]
+    
     
    
     @IBOutlet weak var collectionView: UICollectionView!{
@@ -38,11 +38,11 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sharedItem", for: indexPath)
-
+        let item = items.getItems()[indexPath.item]
         if let mycell = cell  as? SharedItemCollectionViewCell{
-         mycell.sharedItemImage.image = photo[indexPath.item]
-         mycell.itemName.text = "Ciao sono il nome"
-         mycell.itemPrice.text = "Ciao sono il cognome"
+         mycell.sharedItemImage.image = item.image
+         mycell.itemName.text = item.description
+         mycell.itemPrice.text = "\(item.price)"
             
         }
         
