@@ -38,10 +38,13 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shareditem", for: indexPath)
-//
-//        if let mycell = cell  as? SharedItemCollectionViewCell{
-//            
-//        }
+
+        if let mycell = cell  as? SharedItemCollectionViewCell{
+         mycell.sharedItemImage.image = 
+         mycell.itemName.text = "Ciao sono il nome"
+         mycell.itemPrice.text = "Ciao sono il cognome"
+            
+        }
         
         
         return cell
