@@ -13,9 +13,9 @@
 import UIKit
 
 
-class SharingViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class SharingViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     let items = Items.shared
-    
+    let photo = [#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"), #imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24"),#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"), #imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24")]
     
    
     @IBOutlet weak var collectionView: UICollectionView!{
@@ -23,24 +23,24 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
             collectionView.delegate = self
             collectionView.dataSource = self
             collectionView.isScrollEnabled = true
-            collectionView.alwaysBounceHorizontal = true
-        
         }
     }
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return items.getItems().count
+//       return items.getItems().count
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shareditem", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sharedItem", for: indexPath)
 
         if let mycell = cell  as? SharedItemCollectionViewCell{
-         mycell.sharedItemImage.image = 
+         mycell.sharedItemImage.image = photo[indexPath.item]
          mycell.itemName.text = "Ciao sono il nome"
          mycell.itemPrice.text = "Ciao sono il cognome"
             
