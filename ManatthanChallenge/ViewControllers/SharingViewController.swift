@@ -6,18 +6,18 @@
 //  Copyright © 2017 Michele De Sena. All rights reserved.
 //
 //to do list:
-/*
- Settare la regolazione automatica delle dimensioni della view e della collection view in base al numero di elementi nella collection
- */
+
 
 import UIKit
 
 
 class SharingViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     let items = Items.shared
-    let photo = [#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"), #imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24"),#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"), #imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24")]
+    var currentName:String?
+    var currentCredits:Int?
     
    
+    
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.delegate = self
@@ -32,21 +32,19 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//       return items.getItems().count
-        return 6
+       return items.getItems().count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sharedItem", for: indexPath)
-
+        let item = items.getItems()[indexPath.item]
         if let mycell = cell  as? SharedItemCollectionViewCell{
-         mycell.sharedItemImage.image = photo[indexPath.item]
-         mycell.itemName.text = "Ciao sono il nome"
-         mycell.itemPrice.text = "Ciao sono il cognome"
+         mycell.itemButton.setImage(item.image, for: UIControlState.normal)
+         mycell.itemName.text = item.description
+         mycell.itemPrice.text = "credits: \(item.price)"
             
         }
-        
-        
         return cell
         
     }
@@ -55,8 +53,29 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showItem", sender: self)
+        let item = items.getItems()[indexPath.item]
+        self.currentName = item.description
+        self.currentCredits = item.price
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showItem"{
+            guard let destination = segue.destination as? SharedItemViewController else{
+                return
+            }
+            guard let button = sender as? UIButton else{
+                return
+            }
+            destination.coverImage = button.currentBackgroundImage
+            destination.itemName = self.currentName
+            destination.itemPrice = self.currentCredits
+        }
     }
 
     override func didReceiveMemoryWarning() {

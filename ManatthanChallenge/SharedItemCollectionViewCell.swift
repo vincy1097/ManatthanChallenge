@@ -10,9 +10,12 @@ import UIKit
 
 class SharedItemCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var sharedItemImage: UIImageView!
+    
+    @IBOutlet weak var itemButton: UIButton!
     
     @IBOutlet weak var itemName: UILabel!
     
     @IBOutlet weak var itemPrice: UILabel!
+    
+    
 }
