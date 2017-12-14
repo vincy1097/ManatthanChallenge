@@ -17,12 +17,16 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
     var currentCredits:Int?
     
    
+    @IBAction func addItem(_ sender: UIButton) {
+        performSegue(withIdentifier: "modalityAddItem", sender: sender)
+    }
     
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
             collectionView.delegate = self
             collectionView.dataSource = self
             collectionView.isScrollEnabled = true
+            collectionView.alwaysBounceHorizontal = true
         }
     }
     
@@ -61,7 +65,7 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
         performSegue(withIdentifier: "showItem", sender: self)
         let item = items.getItems()[indexPath.item]
         self.currentName = item.description
-        self.currentCredits = item.price
+        self.currentCredits = Int(item.price)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

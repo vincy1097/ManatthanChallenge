@@ -17,6 +17,7 @@ class SharedItemViewController: UIViewController {
     @IBOutlet weak var coverImageView: UIImageView!{
         didSet{
             coverImageView.image = coverImage
+        
         }
     }
     
