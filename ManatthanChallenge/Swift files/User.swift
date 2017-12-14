@@ -13,6 +13,16 @@ class User {
     var surname:String
     var emailAddress:String
     var password:String
+    var credits = 0
+    var currentSale:Int{
+        get{
+            return credits
+        }
+        set{
+            credits = newValue
+        }
+    }
+    
     init (name: String, surname:String, email emailAddress:String, password:String){
         self.name = name
         self.surname = surname
