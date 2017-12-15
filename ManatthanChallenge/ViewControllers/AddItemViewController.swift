@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CloudKit
 
 class AddItemViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     let itemIcons:[UIImage] = []
@@ -18,6 +18,7 @@ class AddItemViewController: UIViewController,UICollectionViewDelegate,UICollect
     @IBOutlet weak var credits: UITextField!
     @IBOutlet weak var name: UITextField!
     let user = User.shared
+    
     
     
     
@@ -75,6 +76,8 @@ class AddItemViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
