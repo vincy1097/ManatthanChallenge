@@ -9,7 +9,7 @@
 import Foundation
 class Items{
     static let shared = Items()
-  
+    var indexPath:IndexPath?
     var sharedItems:[SharedItem]?
     func getItems()->[SharedItem]{
         if let items = self.sharedItems{

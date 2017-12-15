@@ -13,8 +13,7 @@ import UIKit
 
 class SharingViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     let items = Items.shared
-    var currentIndex:Int?
-    
+   
    
     @IBAction func addItem(_ sender: UIButton) {
         performSegue(withIdentifier: "modalityAddItem", sender: sender)
@@ -70,19 +69,26 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.currentIndex = indexPath.item
-        performSegue(withIdentifier: "showItem", sender: self)
+        items.indexPath = indexPath
+        print (items.indexPath)
         print("cell has been selected")
+        
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showItem"{
             guard let destination = segue.destination as? SharedItemViewController else{
                 return
             }
-            destination.item = items.getItems()[self.currentIndex!]
+            
+
+            destination.coverImage = self.currentImage
+            destination.itemName = self.currentName
+            destination.itemPrice = self.currentCredits
+            print("preparing")
+            
         }
-    }
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

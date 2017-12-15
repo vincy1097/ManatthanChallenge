@@ -9,31 +9,35 @@
 import UIKit
 
 class SharedItemViewController: UIViewController {
-    
-    var item:SharedItem?
+    let item = Items.shared
+    let items = Items.shared.getItems()
+    var index:Int?
 
-    @IBOutlet weak var coverImageView: UIImageView!{
-        didSet{
-            coverImageView.image = item?.image
-        }
-    }
+    @IBOutlet weak var coverImageView: UIImageView!
     
     
-    @IBOutlet weak var creditsLabel: UILabel!{
-        didSet{
-            if let currentItem = item {
-                creditsLabel.text = "credits: \(currentItem.credits)"
-            }else{
-                creditsLabel.text = "No element selected"
+    @IBOutlet weak var creditsLabel: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
             }
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = item?.name
+        guard let index = item.indexPath else {
+            self.index = 0
+            return
+        }
+        self.index = index.item
+
+        coverImageView.image = items[self.index!].image
+        creditsLabel.text = "credits: \(items[self.index!].price)"
+        self.navigationItem.title = items[self.index!].name
         self.navigationItem.largeTitleDisplayMode = .never
+
+
     }
+    
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
