@@ -25,6 +25,7 @@
 		19E46D231FE17F5100D53E2F /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D191FE17F5100D53E2F /* Items.swift */; };
 		19E46D241FE17F5100D53E2F /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D1A1FE17F5100D53E2F /* Activity.swift */; };
 		19E46D251FE17F5100D53E2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D1B1FE17F5100D53E2F /* User.swift */; };
+		C6A119121FE3E5150021FAEF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A119111FE3E5150021FAEF /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		19E46D191FE17F5100D53E2F /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		19E46D1A1FE17F5100D53E2F /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		19E46D1B1FE17F5100D53E2F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6A119111FE3E5150021FAEF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
