@@ -9,17 +9,27 @@
 import UIKit
 
 
-class AddItemViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-    let itemIcons:[UIImage] = []
+class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
+    let itemIcons:[UIImage] = [#imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24"),#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"),#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "first")]
     let items = Items.shared
     var photo:UIImage?
     var itemName:String?
     var itemPrice:Int?
-    @IBOutlet weak var credits: UITextField!
-    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var credits: UITextField!{
+        didSet{
+            credits.delegate = self
+        }
+    }
+    @IBOutlet weak var name: UITextField!{
+        didSet{
+            name.delegate = self
+        }
+    }
     let user = User.shared
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemIcons.count
@@ -28,14 +38,13 @@ class AddItemViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reusable", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Reusable Icon", for: indexPath)
         if let mycell = cell as? itemIconCell {
             mycell.icon.image = itemIcons[indexPath.item]
         }
         return cell
     }
 
-    
     
     @IBOutlet weak var iconCollectionView: UICollectionView!{
         didSet{

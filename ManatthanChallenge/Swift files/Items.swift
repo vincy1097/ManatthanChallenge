@@ -14,10 +14,16 @@ class Items{
         if let items = self.sharedItems{
             return items
         }else{
+            print("returning a void array")
             return []
         }
     }
     func addItem(item:SharedItem){
-        self.sharedItems?.append(item)
+        if let _ = self.sharedItems{
+            self.sharedItems!.append(item)
+        }else{
+            self.sharedItems = [item]
+        }
+        print(self.getItems())
     }
 }
