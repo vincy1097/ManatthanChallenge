@@ -15,7 +15,6 @@
 		196C0D1C1FE1A8D90083F1F9 /* SharedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */; };
 		19D639BD1FE2C7A5003D9761 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D639BC1FE2C7A5003D9761 /* AddItemViewController.swift */; };
 		19D639BF1FE2CC51003D9761 /* itemIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D639BE1FE2CC51003D9761 /* itemIconCell.swift */; };
-		19D639C31FE2EBFF003D9761 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D639C21FE2EBFF003D9761 /* CloudKit.framework */; };
 		19E46D1D1FE17F5100D53E2F /* SharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D131FE17F5000D53E2F /* SharingViewController.swift */; };
 		19E46D1E1FE17F5100D53E2F /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D141FE17F5000D53E2F /* Activities.swift */; };
 		19E46D1F1FE17F5100D53E2F /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D151FE17F5100D53E2F /* PeopleViewController.swift */; };
@@ -39,7 +38,6 @@
 		19D639BC1FE2C7A5003D9761 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		19D639BE1FE2CC51003D9761 /* itemIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemIconCell.swift; sourceTree = "<group>"; };
 		19D639C01FE2EBAB003D9761 /* ManatthanChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ManatthanChallenge.entitlements; sourceTree = "<group>"; };
-		19D639C21FE2EBFF003D9761 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		19E46D131FE17F5000D53E2F /* SharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingViewController.swift; sourceTree = "<group>"; };
 		19E46D141FE17F5000D53E2F /* Activities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		19E46D151FE17F5100D53E2F /* PeopleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19D639C31FE2EBFF003D9761 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +96,6 @@
 		19D639C11FE2EBFF003D9761 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				19D639C21FE2EBFF003D9761 /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,10 +161,10 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -360,13 +356,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ManatthanChallenge/ManatthanChallenge.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D4L4S7MAUX;
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = ManatthanChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject.ManatthanChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject.Skittles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -378,13 +373,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ManatthanChallenge/ManatthanChallenge.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D4L4S7MAUX;
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = ManatthanChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject.ManatthanChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject.Skittles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
