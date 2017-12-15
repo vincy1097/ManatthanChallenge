@@ -164,7 +164,7 @@
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -359,7 +359,7 @@
 				CODE_SIGN_ENTITLEMENTS = ManatthanChallenge/ManatthanChallenge.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = ManatthanChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject.ManatthanChallenge;
@@ -377,7 +377,7 @@
 				CODE_SIGN_ENTITLEMENTS = ManatthanChallenge/ManatthanChallenge.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = ManatthanChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject.ManatthanChallenge;

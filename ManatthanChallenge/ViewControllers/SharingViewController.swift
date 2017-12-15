@@ -31,13 +31,21 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+         self.collectionView.setNeedsLayout()
+         self.collectionView.layoutIfNeeded()
+         print ("View Will Appear")
+    }
+    
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return items.getItems().count
-        
+        return items.getItems().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -66,6 +74,7 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
         let item = items.getItems()[indexPath.item]
         self.currentName = item.description
         self.currentCredits = Int(item.price)
+        print("cell has been selected")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

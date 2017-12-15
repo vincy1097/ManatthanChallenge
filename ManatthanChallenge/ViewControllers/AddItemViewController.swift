@@ -71,6 +71,7 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         let item = SharedItem(name: name, image:photo, credits: price, addedBy: user)
         items.addItem(item: item)
         self.dismiss(animated: true, completion: nil)
+            
         }
     }
     
