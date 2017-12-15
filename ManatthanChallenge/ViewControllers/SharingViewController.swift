@@ -13,8 +13,7 @@ import UIKit
 
 class SharingViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     let items = Items.shared
-    var currentName:String?
-    var currentCredits:Int?
+    var currentIndex:Int?
     
    
     @IBAction func addItem(_ sender: UIButton) {
@@ -27,14 +26,15 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
             collectionView.dataSource = self
             collectionView.isScrollEnabled = true
             collectionView.alwaysBounceHorizontal = true
+            
         }
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
-         self.collectionView.setNeedsLayout()
-         self.collectionView.layoutIfNeeded()
-         print ("View Will Appear")
+        
+         self.collectionView.reloadData()
+         
     }
     
     
@@ -52,7 +52,7 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sharedItem", for: indexPath)
         let item = items.getItems()[indexPath.item]
         if let mycell = cell  as? SharedItemCollectionViewCell{
-         mycell.itemButton.setImage(item.image, for: UIControlState.normal)
+         mycell.itemImage.image = item.image
          mycell.itemName.text = item.description
          mycell.itemPrice.text = "credits: \(item.price)"
             
@@ -70,10 +70,8 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.currentIndex = indexPath.item
         performSegue(withIdentifier: "showItem", sender: self)
-        let item = items.getItems()[indexPath.item]
-        self.currentName = item.description
-        self.currentCredits = Int(item.price)
         print("cell has been selected")
     }
 
@@ -82,12 +80,7 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
             guard let destination = segue.destination as? SharedItemViewController else{
                 return
             }
-            guard let button = sender as? UIButton else{
-                return
-            }
-            destination.coverImage = button.currentBackgroundImage
-            destination.itemName = self.currentName
-            destination.itemPrice = self.currentCredits
+            destination.item = items.getItems()[self.currentIndex!]
         }
     }
 

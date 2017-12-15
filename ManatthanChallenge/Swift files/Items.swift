@@ -10,21 +10,21 @@ import Foundation
 class Items{
     static let shared = Items()
   
-    var sharedItems:[SharedItem] = [SharedItem(name: "name", image:#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"), credits: 22, addedBy: User.shared)]
+    var sharedItems:[SharedItem]?
     func getItems()->[SharedItem]{
-        //if let items = self.sharedItems{
-            return sharedItems
-       // }else{
-        //   print("returning a void array")
-        //    return []
-       // }
+        if let items = self.sharedItems{
+            return items
+        }else{
+           print("returning a void array")
+           return []
+        }
     }
     func addItem(item:SharedItem){
-      //  if let _ = self.sharedItems{
-            self.sharedItems.append(item)
-       // }else{
-       //     self.sharedItems = [item]
-       // }
+        if let _ = self.sharedItems{
+            self.sharedItems!.append(item)
+        }else{
+            self.sharedItems = [item]
+        }
         print(self.getItems())
     }
 }

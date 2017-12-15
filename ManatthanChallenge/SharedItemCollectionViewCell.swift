@@ -11,7 +11,8 @@ import UIKit
 class SharedItemCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var itemButton: UIButton!
+    @IBOutlet weak var itemImage: UIImageView!
+    
     
     @IBOutlet weak var itemName: UILabel!
     

@@ -11,6 +11,7 @@
 		058CB8051FE179A300BE3F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8031FE179A300BE3F19 /* Main.storyboard */; };
 		058CB8071FE179A300BE3F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8061FE179A300BE3F19 /* Assets.xcassets */; };
 		058CB80A1FE179A300BE3F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8081FE179A300BE3F19 /* LaunchScreen.storyboard */; };
+		195D6E121FE3F3580028CA99 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195D6E111FE3F3580028CA99 /* CloudKit.framework */; };
 		196C0D1A1FE1A8BC0083F1F9 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */; };
 		196C0D1C1FE1A8D90083F1F9 /* SharedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */; };
 		19D639BD1FE2C7A5003D9761 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D639BC1FE2C7A5003D9761 /* AddItemViewController.swift */; };
@@ -33,6 +34,7 @@
 		058CB8061FE179A300BE3F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058CB8091FE179A300BE3F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058CB80B1FE179A300BE3F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195D6E111FE3F3580028CA99 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemViewController.swift; sourceTree = "<group>"; };
 		19D639BC1FE2C7A5003D9761 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				195D6E121FE3F3580028CA99 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +99,7 @@
 		19D639C11FE2EBFF003D9761 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				195D6E111FE3F3580028CA99 /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -362,7 +366,7 @@
 				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = ManatthanChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject.ManatthanChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -380,7 +384,7 @@
 				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = ManatthanChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject.ManatthanChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosda2017.CloudKitProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

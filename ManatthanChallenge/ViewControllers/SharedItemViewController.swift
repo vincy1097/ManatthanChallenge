@@ -9,27 +9,29 @@
 import UIKit
 
 class SharedItemViewController: UIViewController {
-
-    var coverImage:UIImage?
-    var itemName:String?
-    var itemPrice:Int?
+    
+    var item:SharedItem?
 
     @IBOutlet weak var coverImageView: UIImageView!{
         didSet{
-            coverImageView.image = coverImage
+            coverImageView.image = item?.image
         }
     }
     
     
     @IBOutlet weak var creditsLabel: UILabel!{
         didSet{
-            creditsLabel.text = "credits: \(String(describing: itemPrice))"
+            if let currentItem = item {
+                creditsLabel.text = "credits: \(currentItem.credits)"
+            }else{
+                creditsLabel.text = "No element selected"
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = itemName
+        self.navigationItem.title = item?.name
         self.navigationItem.largeTitleDisplayMode = .never
     }
 

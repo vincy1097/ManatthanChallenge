@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-DS-C2P">
-                                <rect key="frame" x="0.0" y="139" width="375" height="389"/>
+                                <rect key="frame" x="16" y="141" width="359" height="380"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9eb-Jh-tXb">
@@ -46,7 +46,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sharedItem" id="mic-kh-7fp" customClass="SharedItemCollectionViewCell" customModule="ManatthanChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="6.5" width="283" height="376"/>
+                                        <rect key="frame" x="0.0" y="2" width="283" height="376"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="283" height="376"/>
@@ -66,19 +66,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-vh-pdt">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C62-tw-VWe">
                                                     <rect key="frame" x="0.0" y="0.0" width="283" height="290"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <connections>
-                                                        <segue destination="ekL-fS-dFt" kind="show" identifier="showItem" id="hsr-mT-NPC"/>
-                                                    </connections>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="itemButton" destination="P5L-vh-pdt" id="PXI-i7-gDk"/>
+                                            <outlet property="itemImage" destination="C62-tw-VWe" id="m1k-IR-ZaG"/>
                                             <outlet property="itemName" destination="51p-Rh-81h" id="idK-26-ilk"/>
                                             <outlet property="itemPrice" destination="uYp-IP-aIY" id="o14-sy-kv9"/>
+                                            <segue destination="ekL-fS-dFt" kind="show" identifier="showItem" id="gL7-cT-RqS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
