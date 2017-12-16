@@ -19,31 +19,7 @@ class Activity{
     var deadline:Date
     var takenDate:Date?
     var taken = false
-    var description:String{
-        get{
-            return self.name
-        }
-        set{
-            self.name = newValue
-        }
-    }
-    
-    var photo:UIImage{
-        get{
-            return self.image
-        }
-        set{
-            self.image = newValue
-        }
-    }
-    var reward:Int{
-        get{
-            return self.credits
-        }
-        set{
-            self.credits = newValue
-        }
-    }
+  
     
     init (name:String, image:UIImage, reward credits:Int, addedBy creator:User, deadline:Date){
         self.name = name

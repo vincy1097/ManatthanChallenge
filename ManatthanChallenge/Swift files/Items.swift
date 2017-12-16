@@ -8,9 +8,12 @@
 
 import Foundation
 class Items{
+    
     static let shared = Items()
     var indexPath:IndexPath?
     var sharedItems:[SharedItem]?
+    
+    
     func getItems()->[SharedItem]{
         if let items = self.sharedItems{
             return items
@@ -19,12 +22,15 @@ class Items{
            return []
         }
     }
+    
+    
     func addItem(item:SharedItem){
         if let _ = self.sharedItems{
             self.sharedItems!.append(item)
         }else{
             self.sharedItems = [item]
         }
-        print(self.getItems())
     }
+    
+    
 }

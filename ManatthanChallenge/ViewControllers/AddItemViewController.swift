@@ -10,8 +10,9 @@ import UIKit
 
 
 class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
-    let itemIcons:[UIImage] = [#imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24"),#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"),#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "first")]
+    let itemIcons:[UIImage] = []
     let items = Items.shared
+    let user = User.shared
     var photo:UIImage?
     var itemName:String?
     var itemPrice:Int?
@@ -25,11 +26,15 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
             name.delegate = self
         }
     }
-    let user = User.shared
+   
+    //MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }
+    
+    
+    //MARK:UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemIcons.count
@@ -44,6 +49,14 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         }
         return cell
     }
+    
+    //MARK:UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let icon = itemIcons[indexPath.item]
+        collectionView.cellForItem(at: indexPath)?.isHighlighted = true
+        self.photo = icon
+    }
 
     
     @IBOutlet weak var iconCollectionView: UICollectionView!{
@@ -52,9 +65,12 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
             iconCollectionView.dataSource = self
         }
     }
+    
+    
     @IBAction func onTapCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     
     @IBAction func onTapDone(_ sender: UIBarButtonItem) {
         guard let name = self.name.text else{
@@ -77,11 +93,7 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       let icon = itemIcons[indexPath.item]
-        collectionView.cellForItem(at: indexPath)?.isHighlighted = true
-        self.photo = icon
-    }
+    
     
     
     override func viewDidLoad() {

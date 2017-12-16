@@ -5,7 +5,7 @@
 //  Created by Michele De Sena on 13/12/2017.
 //  Copyright © 2017 Michele De Sena. All rights reserved.
 //
-//to do list:
+//
 
 
 import UIKit
@@ -14,10 +14,11 @@ import UIKit
 class SharingViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     let items = Items.shared
    
-   
+    //MARK:Actions and outlets
     @IBAction func addItem(_ sender: UIButton) {
         performSegue(withIdentifier: "modalityAddItem", sender: sender)
     }
+    
     
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
@@ -30,13 +31,13 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-         self.collectionView.reloadData()
-         
+    //MARK:UICollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        items.indexPath = indexPath
     }
     
-    
+    //MARK:UICollectionViewDataSource
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -52,43 +53,26 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
         let item = items.getItems()[indexPath.item]
         if let mycell = cell  as? SharedItemCollectionViewCell{
          mycell.itemImage.image = item.image
-         mycell.itemName.text = item.description
+         mycell.itemName.text = item.name
          mycell.itemPrice.text = "credits: \(item.price)"
-            
         }
         return cell
         
     }
-
     
+    
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        items.indexPath = indexPath
-        print (items.indexPath)
-        print("cell has been selected")
-        
-    }
 
- /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showItem"{
-            guard let destination = segue.destination as? SharedItemViewController else{
-                return
-            }
-            
 
-            destination.coverImage = self.currentImage
-            destination.itemName = self.currentName
-            destination.itemPrice = self.currentCredits
-            print("preparing")
-            
-        }
-    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

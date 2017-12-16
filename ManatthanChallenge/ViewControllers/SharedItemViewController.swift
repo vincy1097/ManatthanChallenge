@@ -9,29 +9,27 @@
 import UIKit
 
 class SharedItemViewController: UIViewController {
-    let item = Items.shared
-    let items = Items.shared.getItems()
+    let items = Items.shared
+    
     var index:Int?
 
+    //MARK:Outlets
     @IBOutlet weak var coverImageView: UIImageView!
-    
     
     @IBOutlet weak var creditsLabel: UILabel!
     
-    override func viewWillAppear(_ animated: Bool) {
-            }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let index = item.indexPath else {
-            self.index = 0
+        guard let indexPath = items.indexPath else {
+            index = 0
             return
         }
-        self.index = index.item
+        index = indexPath.item
 
-        coverImageView.image = items[self.index!].image
-        creditsLabel.text = "credits: \(items[self.index!].price)"
-        self.navigationItem.title = items[self.index!].name
+        coverImageView.image = items.getItems()[index!].image
+        creditsLabel.text = "credits: \(items.getItems()[index!].price)"
+        self.navigationItem.title = items.getItems()[index!].name
         self.navigationItem.largeTitleDisplayMode = .never
 
 
