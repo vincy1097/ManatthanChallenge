@@ -11,7 +11,6 @@
 		058CB8051FE179A300BE3F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8031FE179A300BE3F19 /* Main.storyboard */; };
 		058CB8071FE179A300BE3F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8061FE179A300BE3F19 /* Assets.xcassets */; };
 		058CB80A1FE179A300BE3F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8081FE179A300BE3F19 /* LaunchScreen.storyboard */; };
-		194A74A91FE49C89002F04BD /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A74A81FE49C89002F04BD /* File.swift */; };
 		195D6E121FE3F3580028CA99 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195D6E111FE3F3580028CA99 /* CloudKit.framework */; };
 		196C0D1A1FE1A8BC0083F1F9 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */; };
 		196C0D1C1FE1A8D90083F1F9 /* SharedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */; };
@@ -35,7 +34,6 @@
 		058CB8061FE179A300BE3F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058CB8091FE179A300BE3F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058CB80B1FE179A300BE3F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		194A74A81FE49C89002F04BD /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		195D6E111FE3F3580028CA99 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				19E46D181FE17F5100D53E2F /* SharedItemCollectionViewCell.swift */,
 				058CB7FD1FE179A300BE3F19 /* AppDelegate.swift */,
 				058CB8061FE179A300BE3F19 /* Assets.xcassets */,
-				194A74A81FE49C89002F04BD /* File.swift */,
 				058CB8081FE179A300BE3F19 /* LaunchScreen.storyboard */,
 				058CB80B1FE179A300BE3F19 /* Info.plist */,
 			);
@@ -223,7 +220,6 @@
 				058CB7FE1FE179A300BE3F19 /* AppDelegate.swift in Sources */,
 				19E46D201FE17F5100D53E2F /* ProfileViewController.swift in Sources */,
 				19E46D1D1FE17F5100D53E2F /* SharingViewController.swift in Sources */,
-				194A74A91FE49C89002F04BD /* File.swift in Sources */,
 				19E46D1E1FE17F5100D53E2F /* Activities.swift in Sources */,
 				19E46D241FE17F5100D53E2F /* Activity.swift in Sources */,
 				19E46D211FE17F5100D53E2F /* SharedItem.swift in Sources */,

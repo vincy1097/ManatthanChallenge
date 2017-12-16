@@ -7,18 +7,63 @@
 //
 
 import UIKit
-
+import CloudKit
+import UserNotifications
+import NotificationCenter
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let container = CKContainer.default()
+    var allSharedItems:[CKRecord]?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let privateDatabase = container.privateCloudDatabase
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            (granted, error) in
+            //Parse errors and track state
+        }
+        
+        let generalCategory = UNNotificationCategory(identifier: "GENERAL",
+                                                     actions: [],
+                                                     intentIdentifiers: [],
+                                                     options: .customDismissAction)
+        UNUserNotificationCenter.current().setNotificationCategories([generalCategory])
+        
+        
+        application.registerForRemoteNotifications()
+        
+        let subscription = CKSubscription(coder: <#T##NSCoder#>)
+        
+//        privateDatabase.save(subscription!, completionHandler: (subscription:CKSubscription?,error: Error?) -> Void{
+//
+//
+//        })
+        
         return true
     }
 
+    // Handle remote notification registration.
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
+        // Forward the token to your provider, using a custom method.
+    
+    }
+    
+     func application(_ application: UIApplication,didReceiveRemoteNotification userInfo: [AnyHashable : Any],fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) ){
+        let notificationInfo = userInfo as! [String:NSObject]
+        let notification = CKNotification(fromRemoteNotificationDictionary: notificationInfo)
+
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // The token is not currently available.
+        print("Remote notification support is unavailable due to error: \(error.localizedDescription)")
+       
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -41,6 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    
+    
 }
 

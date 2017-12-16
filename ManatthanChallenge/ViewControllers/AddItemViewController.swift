@@ -10,7 +10,7 @@ import UIKit
 
 
 class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
-    let itemIcons:[UIImage] = []
+    let itemIcons:[UIImage] = [#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"),#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24")]
     let items = Items.shared
     let user = User.shared
     var photo:UIImage?
