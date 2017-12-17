@@ -24,5 +24,7 @@ class SharedItem{
         self.price = price
         self.user = user
     }
-    
+    static func ==(item1:SharedItem,item2:SharedItem)->Bool{
+        return item1.name == item2.name
+    }
 }

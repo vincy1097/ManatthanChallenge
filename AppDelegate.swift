@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.registerForRemoteNotifications()
         
-        let subscription = CKSubscription(coder: <#T##NSCoder#>)
+        //let subscription = CKSubscription(coder: <#T##NSCoder#>)
         
 //        privateDatabase.save(subscription!, completionHandler: (subscription:CKSubscription?,error: Error?) -> Void{
 //
