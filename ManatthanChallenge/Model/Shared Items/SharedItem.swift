@@ -15,22 +15,7 @@ class SharedItem{
     var price:Int
     var user:User
     var booked = false
-    var credits:Int{
-        get{
-            return price
-        }
-        set{
-            price = newValue
-        }
-    }
-    var description:String{
-        get{
-            return self.name
-        }
-        set{
-            self.name = newValue
-        }
-    }
+    
     
     
     init (name: String,image: UIImage, credits price:Int, addedBy user:User){
@@ -39,5 +24,7 @@ class SharedItem{
         self.price = price
         self.user = user
     }
-    
+    static func ==(item1:SharedItem,item2:SharedItem)->Bool{
+        return item1.name == item2.name
+    }
 }

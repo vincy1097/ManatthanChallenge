@@ -7,8 +7,9 @@
 //
 
 import Foundation
+class User{
+    static let shared = User(name:"Chiara",surname:"Capocello",email:"chirettc@gmail.com",password:"1234")
 
-class User {
     var name:String
     var surname:String
     var emailAddress:String
@@ -23,10 +24,15 @@ class User {
         }
     }
     
-    init (name: String, surname:String, email emailAddress:String, password:String){
+    private init (name: String, surname:String, email emailAddress:String, password:String){
+        
         self.name = name
         self.surname = surname
         self.emailAddress = emailAddress
         self.password = password
     }
+    
+    
 }
+    
+

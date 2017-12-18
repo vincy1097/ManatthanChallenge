@@ -9,14 +9,19 @@
 import Foundation
 class Activities{
     static let shared = Activities()
+    
     var activities:[Activity]?
+    
     func getActivities()->[Activity]{
+        
         if let activities = self.activities{
             return activities
         }else{
             return []
         }
+        
     }
+    
     
     func addActivity(activity:Activity){
         self.activities?.append(activity)
