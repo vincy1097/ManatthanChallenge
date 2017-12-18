@@ -15,10 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let container = CKContainer.default()
-    var allSharedItems:[CKRecord]?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let privateDatabase = container.privateCloudDatabase
+        let publicDatabase = container.publicCloudDatabase
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
@@ -34,15 +34,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.registerForRemoteNotifications()
         
-        //let subscription = CKSubscription(coder: <#T##NSCoder#>)
+        let subscription = CKDatabaseSubscription(subscriptionID:"Subscription")
+
+        publicDatabase.save(subscription) { (subscription, error) in
         
-//        privateDatabase.save(subscription!, completionHandler: (subscription:CKSubscription?,error: Error?) -> Void{
-//
-//
-//        })
+            
+        }
+        
+//        Bookings.shared.bookings = CKQuery()
+//        Items.shared.sharedItems = CKQuery()
+//        Activities.shared.activities = CKQuery()
         
         return true
+   }
+    
+    func application(_ application: UIApplication,didReceiveRemoteNotification userInfo: [AnyHashable : Any]){
+        let notificationInfo = userInfo as! [String:NSObject]
+        let notification = CKNotification(fromRemoteNotificationDictionary: notificationInfo)
+        _ = notification.alertBody
+        if let queryNotification = notification as? CKQueryNotification{
+            _ = queryNotification.recordID
+        }
+        
     }
+    
 
     // Handle remote notification registration.
     func application(_ application: UIApplication,
@@ -51,11 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     }
     
-     func application(_ application: UIApplication,didReceiveRemoteNotification userInfo: [AnyHashable : Any],fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) ){
-        let notificationInfo = userInfo as! [String:NSObject]
-        let notification = CKNotification(fromRemoteNotificationDictionary: notificationInfo)
-
-    }
     
     func application(_ application: UIApplication,
                      didFailToRegisterForRemoteNotificationsWithError error: Error) {
