@@ -13,16 +13,14 @@ class SharedItem{
     var name:String
     var image:UIImage
     var price:Int
-    var user:User
     var booked = false
     
     
     
-    init (name: String,image: UIImage, credits price:Int, addedBy user:User){
+    init (name: String,image: UIImage, credits price:Int){
         self.name = name
         self.image = image
         self.price = price
-        self.user = user
     }
     static func ==(item1:SharedItem,item2:SharedItem)->Bool{
         return item1.name == item2.name
