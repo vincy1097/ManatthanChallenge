@@ -8,16 +8,29 @@
 
 import Foundation
 class Items{
+    
     static let shared = Items()
+    var indexPath:IndexPath?
     var sharedItems:[SharedItem]?
+    
+    
     func getItems()->[SharedItem]{
         if let items = self.sharedItems{
             return items
         }else{
-            return []
+           print("returning a void array")
+           return []
         }
     }
+    
+    
     func addItem(item:SharedItem){
-        self.sharedItems?.append(item)
+        if let _ = self.sharedItems{
+            self.sharedItems!.append(item)
+        }else{
+            self.sharedItems = [item]
+        }
     }
+    
+    
 }

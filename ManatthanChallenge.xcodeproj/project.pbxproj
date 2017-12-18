@@ -11,8 +11,12 @@
 		058CB8051FE179A300BE3F19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8031FE179A300BE3F19 /* Main.storyboard */; };
 		058CB8071FE179A300BE3F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8061FE179A300BE3F19 /* Assets.xcassets */; };
 		058CB80A1FE179A300BE3F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8081FE179A300BE3F19 /* LaunchScreen.storyboard */; };
+		19236A1A1FE7F5A300622AC1 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19236A191FE7F5A300622AC1 /* Database.swift */; };
+		195D6E121FE3F3580028CA99 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195D6E111FE3F3580028CA99 /* CloudKit.framework */; };
 		196C0D1A1FE1A8BC0083F1F9 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */; };
 		196C0D1C1FE1A8D90083F1F9 /* SharedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */; };
+		19D1278E1FE6B65300AC6D8F /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D1278D1FE6B65300AC6D8F /* People.swift */; };
+		19D127931FE6B77700AC6D8F /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D127921FE6B77700AC6D8F /* Booking.swift */; };
 		19D639BD1FE2C7A5003D9761 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D639BC1FE2C7A5003D9761 /* AddItemViewController.swift */; };
 		19D639BF1FE2CC51003D9761 /* itemIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D639BE1FE2CC51003D9761 /* itemIconCell.swift */; };
 		19E46D1D1FE17F5100D53E2F /* SharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D131FE17F5000D53E2F /* SharingViewController.swift */; };
@@ -24,7 +28,6 @@
 		19E46D231FE17F5100D53E2F /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D191FE17F5100D53E2F /* Items.swift */; };
 		19E46D241FE17F5100D53E2F /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D1A1FE17F5100D53E2F /* Activity.swift */; };
 		19E46D251FE17F5100D53E2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E46D1B1FE17F5100D53E2F /* User.swift */; };
-		C6A119121FE3E5150021FAEF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A119111FE3E5150021FAEF /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +37,12 @@
 		058CB8061FE179A300BE3F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058CB8091FE179A300BE3F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058CB80B1FE179A300BE3F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19236A191FE7F5A300622AC1 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		195D6E111FE3F3580028CA99 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemViewController.swift; sourceTree = "<group>"; };
+		19D1278D1FE6B65300AC6D8F /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		19D127921FE6B77700AC6D8F /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		19D639BC1FE2C7A5003D9761 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		19D639BE1FE2CC51003D9761 /* itemIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemIconCell.swift; sourceTree = "<group>"; };
 		19D639C01FE2EBAB003D9761 /* ManatthanChallenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ManatthanChallenge.entitlements; sourceTree = "<group>"; };
@@ -48,7 +55,6 @@
 		19E46D191FE17F5100D53E2F /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		19E46D1A1FE17F5100D53E2F /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		19E46D1B1FE17F5100D53E2F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C6A119111FE3E5150021FAEF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6A119121FE3E5150021FAEF /* CloudKit.framework in Frameworks */,
+				195D6E121FE3F3580028CA99 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,8 @@
 		058CB7F11FE179A300BE3F19 = {
 			isa = PBXGroup;
 			children = (
+				19236A191FE7F5A300622AC1 /* Database.swift */,
+				058CB7FD1FE179A300BE3F19 /* AppDelegate.swift */,
 				058CB7FC1FE179A300BE3F19 /* ManatthanChallenge */,
 				058CB7FB1FE179A300BE3F19 /* Products */,
 				19D639C11FE2EBFF003D9761 /* Frameworks */,
@@ -84,11 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				19D639C01FE2EBAB003D9761 /* ManatthanChallenge.entitlements */,
-				19E46D271FE17FD500D53E2F /* ViewControllers */,
-				19E46D261FE17FAB00D53E2F /* Swift files */,
+				19E46D271FE17FD500D53E2F /* Controller */,
+				19E46D261FE17FAB00D53E2F /* Model */,
 				058CB8031FE179A300BE3F19 /* Main.storyboard */,
-				19E46D181FE17F5100D53E2F /* SharedItemCollectionViewCell.swift */,
-				058CB7FD1FE179A300BE3F19 /* AppDelegate.swift */,
 				058CB8061FE179A300BE3F19 /* Assets.xcassets */,
 				058CB8081FE179A300BE3F19 /* LaunchScreen.storyboard */,
 				058CB80B1FE179A300BE3F19 /* Info.plist */,
@@ -96,38 +102,89 @@
 			path = ManatthanChallenge;
 			sourceTree = "<group>";
 		};
-		19D639C11FE2EBFF003D9761 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C6A119111FE3E5150021FAEF /* CloudKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		19E46D261FE17FAB00D53E2F /* Swift files */ = {
+		19D127891FE6B5D500AC6D8F /* Activity */ = {
 			isa = PBXGroup;
 			children = (
 				19E46D141FE17F5000D53E2F /* Activities.swift */,
 				19E46D1A1FE17F5100D53E2F /* Activity.swift */,
-				19E46D191FE17F5100D53E2F /* Items.swift */,
-				19E46D171FE17F5100D53E2F /* SharedItem.swift */,
-				19E46D1B1FE17F5100D53E2F /* User.swift */,
 			);
-			path = "Swift files";
+			path = Activity;
 			sourceTree = "<group>";
 		};
-		19E46D271FE17FD500D53E2F /* ViewControllers */ = {
+		19D1278A1FE6B5ED00AC6D8F /* Shared Items */ = {
+			isa = PBXGroup;
+			children = (
+				19E46D191FE17F5100D53E2F /* Items.swift */,
+				19E46D171FE17F5100D53E2F /* SharedItem.swift */,
+			);
+			path = "Shared Items";
+			sourceTree = "<group>";
+		};
+		19D1278B1FE6B62300AC6D8F /* People */ = {
+			isa = PBXGroup;
+			children = (
+				19E46D1B1FE17F5100D53E2F /* User.swift */,
+				19D1278D1FE6B65300AC6D8F /* People.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		19D1278F1FE6B69A00AC6D8F /* Shared Items */ = {
 			isa = PBXGroup;
 			children = (
 				19D639BC1FE2C7A5003D9761 /* AddItemViewController.swift */,
-				19D639BE1FE2CC51003D9761 /* itemIconCell.swift */,
-				19E46D151FE17F5100D53E2F /* PeopleViewController.swift */,
-				19E46D161FE17F5100D53E2F /* ProfileViewController.swift */,
 				19E46D131FE17F5000D53E2F /* SharingViewController.swift */,
-				196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */,
 				196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */,
 			);
-			path = ViewControllers;
+			path = "Shared Items";
+			sourceTree = "<group>";
+		};
+		19D127901FE6B6FB00AC6D8F /* People */ = {
+			isa = PBXGroup;
+			children = (
+				19E46D151FE17F5100D53E2F /* PeopleViewController.swift */,
+				19E46D161FE17F5100D53E2F /* ProfileViewController.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		19D127911FE6B70E00AC6D8F /* Custom classes */ = {
+			isa = PBXGroup;
+			children = (
+				19D639BE1FE2CC51003D9761 /* itemIconCell.swift */,
+				19E46D181FE17F5100D53E2F /* SharedItemCollectionViewCell.swift */,
+			);
+			path = "Custom classes";
+			sourceTree = "<group>";
+		};
+		19D639C11FE2EBFF003D9761 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				195D6E111FE3F3580028CA99 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19E46D261FE17FAB00D53E2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19D1278B1FE6B62300AC6D8F /* People */,
+				19D1278A1FE6B5ED00AC6D8F /* Shared Items */,
+				19D127891FE6B5D500AC6D8F /* Activity */,
+				19D127921FE6B77700AC6D8F /* Booking.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19E46D271FE17FD500D53E2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19D127911FE6B70E00AC6D8F /* Custom classes */,
+				19D127901FE6B6FB00AC6D8F /* People */,
+				19D1278F1FE6B69A00AC6D8F /* Shared Items */,
+				196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E46D221FE17F5100D53E2F /* SharedItemCollectionViewCell.swift in Sources */,
+				19D127931FE6B77700AC6D8F /* Booking.swift in Sources */,
 				19E46D1F1FE17F5100D53E2F /* PeopleViewController.swift in Sources */,
 				196C0D1C1FE1A8D90083F1F9 /* SharedItemViewController.swift in Sources */,
 				19E46D231FE17F5100D53E2F /* Items.swift in Sources */,
+				19D1278E1FE6B65300AC6D8F /* People.swift in Sources */,
 				196C0D1A1FE1A8BC0083F1F9 /* ActivitiesViewController.swift in Sources */,
 				19D639BD1FE2C7A5003D9761 /* AddItemViewController.swift in Sources */,
 				19E46D251FE17F5100D53E2F /* User.swift in Sources */,
@@ -221,6 +280,7 @@
 				19E46D201FE17F5100D53E2F /* ProfileViewController.swift in Sources */,
 				19E46D1D1FE17F5100D53E2F /* SharingViewController.swift in Sources */,
 				19E46D1E1FE17F5100D53E2F /* Activities.swift in Sources */,
+				19236A1A1FE7F5A300622AC1 /* Database.swift in Sources */,
 				19E46D241FE17F5100D53E2F /* Activity.swift in Sources */,
 				19E46D211FE17F5100D53E2F /* SharedItem.swift in Sources */,
 				19D639BF1FE2CC51003D9761 /* itemIconCell.swift in Sources */,
