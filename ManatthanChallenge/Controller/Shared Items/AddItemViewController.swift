@@ -84,7 +84,7 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
             return
         }
         if let price = Int(credits) {
-        let item = SharedItem(name: name, image:photo, credits: price, addedBy: user)
+        let item = SharedItem(name: name, image:photo, credits: price)
         items.addItem(item: item)
         
         self.dismiss(animated: true, completion: nil)
