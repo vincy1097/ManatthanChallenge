@@ -13,7 +13,8 @@ import UIKit
 
 class SharingViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     let items = Items.shared
-   
+                                                                                                                            let database = Database.shared
+    let itemArray = Database.shared.itemArray
     //MARK:Actions and outlets
     @IBAction func addItem(_ sender: UIButton) {
         performSegue(withIdentifier: "modalityAddItem", sender: sender)
@@ -45,12 +46,12 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.getItems().count
+        return itemArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sharedItem", for: indexPath)
-        let item = items.getItems()[indexPath.item]
+        let item = itemArray[indexPath.item]
         if let mycell = cell  as? SharedItemCollectionViewCell{
          mycell.itemImage.image = item.image
          mycell.itemName.text = item.name
@@ -70,6 +71,7 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
+                                                                                                        database.saveItem(name: "ciaoooo", price: 20)
     }
 
 

@@ -14,11 +14,12 @@ import NotificationCenter
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let container = CKContainer.default()
+    let database = Database.shared
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let publicDatabase = container.publicCloudDatabase
+        let publicDatabase = database.publicDatabase
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
@@ -44,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Bookings.shared.bookings = CKQuery()
 //        Items.shared.sharedItems = CKQuery()
 //        Activities.shared.activities = CKQuery()
-        
+        database.recuperaNote()
         return true
    }
     
