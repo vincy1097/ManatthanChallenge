@@ -94,6 +94,27 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     }
     
     
+    @IBAction func saveItem(_ sender: Any) {
+        
+        let publicDatabase = Database.shared.publicDatabase
+        
+        //if name.text != "" {
+            let recordItem = CKRecord(recordType: "sharedItems")
+            recordItem["itemName"] = name.text! as CKRecordValue
+        recordItem["price"] = credits.text as! CKRecordValue
+            publicDatabase.save(recordItem) {
+                (recordItem, error) in
+                if let error = error {
+                    // Insert error handling
+                    print(error)
+                    return
+                }
+                // Insert successfully saved record code
+                print("Item salvato con successo")
+            //}
+            
+        }
+    }
     
     
     
