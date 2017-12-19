@@ -49,7 +49,7 @@ class Database {
     let publicDatabase = CKContainer.default().publicCloudDatabase
     let items = Items.shared.getItems()
     
-    func saveItem(name:String, price:Int) {
+    /*func saveItem(name:String, price:Int) {
         
         let recordItem = CKRecord(recordType: "sharedItems")
         
@@ -74,7 +74,7 @@ class Database {
         }
         
         
-    }
+    }*/
     
     
 

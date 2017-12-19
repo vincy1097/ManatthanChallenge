@@ -101,7 +101,10 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         //if name.text != "" {
             let recordItem = CKRecord(recordType: "sharedItems")
             recordItem["itemName"] = name.text! as CKRecordValue
-        recordItem["price"] = credits.text as! CKRecordValue
+            let price = Int(credits.text!)
+    
+        
+        recordItem["price"] = price as! CKRecordValue
             publicDatabase.save(recordItem) {
                 (recordItem, error) in
                 if let error = error {
