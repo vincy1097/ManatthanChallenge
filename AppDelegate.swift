@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        Bookings.shared.bookings = CKQuery()
 //        Items.shared.sharedItems = CKQuery()
 //        Activities.shared.activities = CKQuery()
-        database.recuperaNote()
+        //database.recuperaNote()
         return true
    }
     

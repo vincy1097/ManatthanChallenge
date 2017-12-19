@@ -62,7 +62,17 @@ class Database {
         
         recordItem["itemName"] = name as CKRecordValue
         recordItem["price"] = price as CKRecordValue
-        print("Item salvato con successo")
+        publicDatabase.save(recordItem) {
+            (recordItem, error) in
+            if let error = error {
+                // Insert error handling
+                print(error)
+                return
+            }
+            // Insert successfully saved record code
+            print("Item salvato con successo")
+        }
+        
         
     }
     
