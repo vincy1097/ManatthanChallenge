@@ -53,14 +53,19 @@ class Database {
         
         let recordItem = CKRecord(recordType: "sharedItems")
         
-        recordItem.setValue(name, forKey: "itemName")
+        /*recordItem.setValue(name, forKey: "itemName")
         //recordItem.setValue(image, forKey: "itemImage")
         recordItem.setValue(price, forKey: "price")
         
         publicDatabase.save(recordItem, completionHandler: { (record, error) -> Void in
-            print("Item salvato con successo")
-        })
+            print("Item salvato con successo")*/
+        
+        recordItem["itemName"] = name as CKRecordValue
+        recordItem["price"] = price as CKRecordValue
+        print("Item salvato con successo")
+        
     }
+    
     
 
     func recuperaNote() {
