@@ -198,9 +198,9 @@
                                                 <action selector="onTapCancel:" destination="AVA-GK-HgT" id="Dx8-zD-q0D"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="O3X-2g-Y35">
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="O3X-2g-Y35">
                                             <connections>
-                                                <action selector="onTapDone:" destination="AVA-GK-HgT" id="cW3-V9-i6R"/>
+                                                <action selector="saveItem:" destination="AVA-GK-HgT" id="adh-dJ-mqJ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

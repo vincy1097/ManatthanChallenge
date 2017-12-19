@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CloudKit
 
 class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
     let itemIcons:[UIImage] = [#imageLiteral(resourceName: "Foto del 30-11-17 alle 17.16"),#imageLiteral(resourceName: "Foto del 23-10-17 alle 20.21"),#imageLiteral(resourceName: "Foto del 21-10-17 alle 13.24")]
@@ -35,6 +35,7 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     
     
     //MARK:UICollectionViewDataSource
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemIcons.count
@@ -93,11 +94,37 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     }
     
     
+    @IBAction func saveItem(_ sender: Any) {
+        
+        let publicDatabase = Database.shared.publicDatabase
+        
+        //if name.text != "" {
+            let recordItem = CKRecord(recordType: "sharedItems")
+            recordItem["itemName"] = name.text! as CKRecordValue
+            let price = Int(credits.text!)
+    
+        
+        recordItem["price"] = price as! CKRecordValue
+            publicDatabase.save(recordItem) {
+                (recordItem, error) in
+                if let error = error {
+                    // Insert error handling
+                    print(error)
+                    return
+                }
+                // Insert successfully saved record code
+                print("Item salvato con successo")
+            //}
+            
+        }
+    }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

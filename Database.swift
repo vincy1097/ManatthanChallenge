@@ -49,18 +49,33 @@ class Database {
     let publicDatabase = CKContainer.default().publicCloudDatabase
     let items = Items.shared.getItems()
     
-    func saveItem(name:String, price:Int) {
+    /*func saveItem(name:String, price:Int) {
         
         let recordItem = CKRecord(recordType: "sharedItems")
         
-        recordItem.setValue(name, forKey: "itemName")
+        /*recordItem.setValue(name, forKey: "itemName")
         //recordItem.setValue(image, forKey: "itemImage")
         recordItem.setValue(price, forKey: "price")
         
         publicDatabase.save(recordItem, completionHandler: { (record, error) -> Void in
+            print("Item salvato con successo")*/
+        
+        recordItem["itemName"] = name as CKRecordValue
+        recordItem["price"] = price as CKRecordValue
+        publicDatabase.save(recordItem) {
+            (recordItem, error) in
+            if let error = error {
+                // Insert error handling
+                print(error)
+                return
+            }
+            // Insert successfully saved record code
             print("Item salvato con successo")
-        })
-    }
+        }
+        
+        
+    }*/
+    
     
 
     func recuperaNote() {

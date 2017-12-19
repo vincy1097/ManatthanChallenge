@@ -42,7 +42,7 @@ class AddIActivityViewController: UIViewController {
             return
         }
         if let reward = Int(credits) {
-            let activity = Activity(name:name,image:photo,reward: reward, addedBy: creator, deadline:deadline)
+            let activity = Activity(name:name,image:photo,reward: reward, addedBy: creator, deadline:deadline!)
             
             self.dismiss(animated: true, completion: nil)
             activities.add(activity: activity)
