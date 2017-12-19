@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import CloudKit
 class User{
+    
     static let shared = User(name:"Chiara",surname:"Capocello",email:"chirettc@gmail.com",password:"1234")
 
     var name:String

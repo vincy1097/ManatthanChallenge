@@ -12,6 +12,7 @@
 		058CB8071FE179A300BE3F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8061FE179A300BE3F19 /* Assets.xcassets */; };
 		058CB80A1FE179A300BE3F19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CB8081FE179A300BE3F19 /* LaunchScreen.storyboard */; };
 		19236A1A1FE7F5A300622AC1 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19236A191FE7F5A300622AC1 /* Database.swift */; };
+		19236A1C1FE81FD900622AC1 /* AddIActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19236A1B1FE81FD900622AC1 /* AddIActivityViewController.swift */; };
 		195D6E121FE3F3580028CA99 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 195D6E111FE3F3580028CA99 /* CloudKit.framework */; };
 		196C0D1A1FE1A8BC0083F1F9 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */; };
 		196C0D1C1FE1A8D90083F1F9 /* SharedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */; };
@@ -38,6 +39,7 @@
 		058CB8091FE179A300BE3F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058CB80B1FE179A300BE3F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19236A191FE7F5A300622AC1 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		19236A1B1FE81FD900622AC1 /* AddIActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIActivityViewController.swift; sourceTree = "<group>"; };
 		195D6E111FE3F3580028CA99 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		196C0D1B1FE1A8D90083F1F9 /* SharedItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedItemViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				19D127901FE6B6FB00AC6D8F /* People */,
 				19D1278F1FE6B69A00AC6D8F /* Shared Items */,
 				196C0D191FE1A8BC0083F1F9 /* ActivitiesViewController.swift */,
+				19236A1B1FE81FD900622AC1 /* AddIActivityViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19236A1C1FE81FD900622AC1 /* AddIActivityViewController.swift in Sources */,
 				19E46D221FE17F5100D53E2F /* SharedItemCollectionViewCell.swift in Sources */,
 				19D127931FE6B77700AC6D8F /* Booking.swift in Sources */,
 				19E46D1F1FE17F5100D53E2F /* PeopleViewController.swift in Sources */,

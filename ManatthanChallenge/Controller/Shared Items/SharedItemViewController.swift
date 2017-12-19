@@ -13,7 +13,7 @@ class SharedItemViewController: UIViewController,UITableViewDelegate,UITableView
     let bookings = Bookings.shared
     let items = Items.shared
     
-    
+    @IBOutlet weak var itemNameLabel: UILabel!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let indexPath = items.indexPath else{
@@ -28,7 +28,7 @@ class SharedItemViewController: UIViewController,UITableViewDelegate,UITableView
             return cell
         }
         cell.textLabel?.text = bookings.getBookings(forItem: items.getItems()[index.row])[indexPath.row].user.name
-        
+        cell.detailTextLabel?.text = "from:\(bookings.getBookings(forItem: items.getItems()[index.row])[indexPath.row].startDateTime) to: \(bookings.getBookings(forItem: items.getItems()[index.row])[indexPath.row].endingDateTime)"
         return cell
     }
     

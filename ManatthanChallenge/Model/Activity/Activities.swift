@@ -23,7 +23,7 @@ class Activities{
     }
     
     
-    func addActivity(activity:Activity){
+    func add(activity:Activity){
         self.activities?.append(activity)
     }
 }
