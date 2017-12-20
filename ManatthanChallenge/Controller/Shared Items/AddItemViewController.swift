@@ -87,37 +87,13 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         if let price = Int(credits) {
         let item = SharedItem(name: name, image:photo, credits: price)
         items.addItem(item: item)
-        
         self.dismiss(animated: true, completion: nil)
             
         }
     }
     
     
-    @IBAction func saveItem(_ sender: Any) {
-        
-        let publicDatabase = Database.shared.publicDatabase
-        
-        //if name.text != "" {
-            let recordItem = CKRecord(recordType: "sharedItems")
-            recordItem["itemName"] = name.text! as CKRecordValue
-            let price = Int(credits.text!)
-    
-        
-        recordItem["price"] = price as! CKRecordValue
-            publicDatabase.save(recordItem) {
-                (recordItem, error) in
-                if let error = error {
-                    // Insert error handling
-                    print(error)
-                    return
-                }
-                // Insert successfully saved record code
-                print("Item salvato con successo")
-            //}
-            
-        }
-    }
+
     
     
     

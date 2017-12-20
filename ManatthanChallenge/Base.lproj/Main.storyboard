@@ -200,7 +200,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="O3X-2g-Y35">
                                             <connections>
-                                                <action selector="saveItem:" destination="AVA-GK-HgT" id="adh-dJ-mqJ"/>
+                                                <action selector="onTapDone:" destination="AVA-GK-HgT" id="nyv-2Z-NYX"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

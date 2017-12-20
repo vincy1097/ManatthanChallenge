@@ -41,6 +41,7 @@ class AddIActivityViewController: UIViewController {
         guard let credits = self.creditsTextField.text else {
             return
         }
+        deadline = datePicker.date
         if let reward = Int(credits) {
             let activity = Activity(name:name,image:photo,reward: reward, addedBy: creator, deadline:deadline!)
             

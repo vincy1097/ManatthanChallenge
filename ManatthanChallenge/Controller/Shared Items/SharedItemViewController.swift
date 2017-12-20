@@ -53,7 +53,6 @@ class SharedItemViewController: UIViewController,UITableViewDelegate,UITableView
         self.navigationItem.title = items.getItems()[index].name
         self.navigationItem.largeTitleDisplayMode = .never
 
-
     }
     
   

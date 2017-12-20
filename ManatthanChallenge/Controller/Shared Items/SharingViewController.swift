@@ -13,7 +13,7 @@ import UIKit
 
 class SharingViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
     let items = Items.shared
-                                                                                                                            let database = Database.shared
+    let database = Database.shared
     let itemArray = Database.shared.itemArray
     //MARK:Actions and outlets
     @IBAction func addItem(_ sender: UIButton) {
@@ -71,16 +71,6 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
-                                                                                                        //database.saveItem(name: "ciaoooo", price: 20)
+
     }
-
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-
 }
