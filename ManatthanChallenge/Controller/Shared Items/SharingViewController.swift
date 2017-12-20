@@ -71,7 +71,8 @@ class SharingViewController: UIViewController,UICollectionViewDelegate,UICollect
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
-                                                                                                        //database.saveItem(name: "ciaoooo", price: 20)
+        
+        //database.saveItem(name: "ciaoooo", price: 20)
     }
 
 

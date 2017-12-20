@@ -104,7 +104,7 @@ class AddItemViewController: UIViewController,UITextFieldDelegate,UICollectionVi
             let price = Int(credits.text!)
     
         
-        recordItem["price"] = price as! CKRecordValue
+            recordItem["price"] = price as CKRecordValue?
             publicDatabase.save(recordItem) {
                 (recordItem, error) in
                 if let error = error {
